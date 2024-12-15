@@ -123,10 +123,6 @@ fieldset {
   border: none;
 }
 
-.search-form__checkbox-list {
-  display: flex;
-  gap: 5px;
-}
 
 .search-form__fieldset-title {
   font-family: "Fira Sans Condensed";
@@ -226,6 +222,8 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 
 .content__list-item {
   display: block;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .content__card-link_current:active {
@@ -267,10 +265,6 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 
 .content__list-container {
   padding-top: 20px;
-}
-
-.content__list-item {
-  padding: 3px;
 }
 
 .content__list-item:focus {
