@@ -59,7 +59,6 @@ ol {
   align-items: center;
   gap: 30px;
   width: 1140px;
-  height: 534px;
 }
 
 .search-form {
@@ -72,9 +71,12 @@ ol {
 
 .content__list {
   display: grid;
-  gap: 23px;
   height: 298px;
   overflow-x: auto;
+}
+
+.content__list-item:not(:last-of-type) {
+  margin-bottom: 30px;
 }
 
 .content__details {
@@ -97,6 +99,7 @@ ol {
 .content__video-card {
   display: flex;
   justify-content: space-between;
+  object-position: center;
 }
 
 .content__video-card-thumbnail {
@@ -123,9 +126,8 @@ fieldset {
   border: none;
 }
 
-
 .search-form__fieldset-title {
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   appearance: none;
@@ -133,9 +135,10 @@ fieldset {
 
 .search-form__label {
   display: flex;
+  align-items: center;
   gap: 5px;
   width: fit-content;
-  height: 54px;
+  padding-top: 5px;
 }
 
 .search-form__textfield {
@@ -144,7 +147,8 @@ fieldset {
   border: none;
   border-top: white solid 1px;
   border-bottom: white solid 1px;
-  font-family: "Fira Sans Condensed";
+  color: white;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   background-color: transparent;
@@ -154,7 +158,6 @@ fieldset {
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
-  padding-top: 5px;
 }
 
 .search-form__pseudo-checkbox {
@@ -175,7 +178,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
   background-color: white;
 }
 
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
@@ -183,7 +186,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
   height: 34px;
   border: 1px solid white;
   color: white;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 21.6px;
@@ -220,15 +223,20 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 
 .content__list-item {
   display: block;
-  padding-left: 3px;
   padding-right: 3px;
+  padding-left: 3px;
+}
+
+.content__card-link_current {
+  display: block;
+  background-color: #545050;
 }
 
 .content__card-link_current:active {
   background-color: #545050;
 }
 
-.content__video-card-description-container:hover {
+.content__card-link:hover {
   text-decoration: underline;
 }
 
@@ -238,35 +246,39 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 }
 
 .content__video-card-title {
+  max-width: 196px;
+  overflow: hidden;
   color: white;
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
   text-align: left;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content__video-card-description {
+  padding-top: 6px;
   color: white;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
   text-align: left;
   cursor: pointer;
-  padding-top: 6px;
 }
 
 .content__list-container {
-  padding-top: 20px;
+  padding-top: 25px;
 }
 
-.content__list-item:focus {
+.content__card-link:focus {
   outline: none;
 }
 
-.content__video-card:hover {
+.content__card-link:hover {
   text-decoration-color: #fff;
   text-decoration-line: underline;
   text-decoration-style: solid;
@@ -274,11 +286,14 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
   text-underline-position: from-font;
 }
 
-.content__video-card:active {
+.content__card-link_current {
+  background-color: #545050;
+}
+.content__card-link:active {
   background-color: #545050;
 }
 
-.content__video-card:focus-visible {
+.content__card-link:focus-visible {
   outline: 1px white solid;
 }
 
@@ -288,7 +303,8 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 }
 
 .title {
-  font-family: "Oswald";
+  margin-top: 30px;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 70.5px;
