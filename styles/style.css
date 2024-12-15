@@ -236,9 +236,6 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
   background-color: #545050;
 }
 
-.content__card-link:hover {
-  text-decoration: underline;
-}
 
 .content__card-link {
   text-decoration: none;
@@ -286,9 +283,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
   text-underline-position: from-font;
 }
 
-.content__card-link_current {
-  background-color: #545050;
-}
+
 .content__card-link:active {
   background-color: #545050;
 }
